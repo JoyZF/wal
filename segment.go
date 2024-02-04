@@ -262,7 +262,7 @@ func (s *segment) writeAll(data [][]byte) ([]*ChunkPosition, error) {
 	if err = s.writeChunkBuffer(chunkBuffer); err != nil {
 		return nil, err
 	}
-	return nil, err
+	return cp, nil
 }
 
 // Write writes the data to the segment file.
